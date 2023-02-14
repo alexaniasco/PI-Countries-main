@@ -1,0 +1,103 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    zoom: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(167, 145, 118, 0.636);
+}
+
+.cont_formulario{
+   font-weight: 600;
+
+    background-color: white;
+    
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+  
+}
+
+.activity{
+  
+    background-color: rgba(255, 255, 255, 0.778);
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    align-items: stretch;
+}
+
+.contenedor{
+    display: grid;
+    gap: 10px;
+ margin: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    
+ margin: 30px 300px;
+   background-color: blue;
+}
+
+.succes{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+    background-color: green;
+    margin: 0;
+    padding: 40px;
+
+}
+
+.error_submit{
+    background-color: red;
+    width: 90%;
+}
+
+.input_error{
+    border-color: red;
+    border-radius: 3px;
+}
+
+.countrie_selected{
+    display: flex;
+}
+
+
+.formularioss{
+    height: 100vh;
+}
+
+.buton_contr{
+    background-color: rgb(185, 72, 72);
+    border-width: 0;
+    margin: 3px;
+}
+
+.form_h1{
+    background-color: rgba(6, 6, 213, 0.826);
+    display: flex;
+    margin: 0;
+    padding: 42px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submitear{
+    margin-bottom: 30px;
+    
+    border-radius: 5px;
+    background-color:rgba(35, 35, 251, 0.931);
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    box-shadow: 3px 3px 9px #000000;
+}
+
+.ides{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ides_btn{
+    padding: 10px 20px;
+}

@@ -1,0 +1,57 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    line-height: 50px;
+    flex-direction: column;
+
+}
+
+.navbar_form{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar_form_group{
+
+}
+
+.navbar_butons{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    
+
+}
+
+.buton{
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color:rgba(35, 35, 251, 0.931);
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    box-shadow: 3px 3px 9px #000000;
+}
+
+.search_input{
+    padding: 5px 30px;
+}
+
+.found{
+    height: 20px;
+    width: 30px;
+  
+    color: white;
+   
+}
+
+.cfound{
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.error_search{
+    background-color: red;
+}

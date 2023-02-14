@@ -1,0 +1,102 @@
+.Detalles{
+display:flex;
+flex-direction: column-reverse;
+background-color: rgba(0, 0, 0, 0.404);
+margin: 10px 10px;
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.text{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.image{
+    width: 600px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+}
+
+.ACTIVIDADES{
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap  ;
+   flex-direction: column;
+   gap: 10px;
+   background-image: url("https://img.ecologiahoy.com/2017/06/paisajes-naturales-26.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.act{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 10px 10px;
+    border-style:groove ;
+    border-color: rgba(110, 14, 14, 0.711);
+    background-color: rgba(0, 0, 0, 0.493);
+    
+    min-width: 200px;
+}
+
+.actt{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.acc{
+    color: white;
+}
+
+.titulo{
+
+    line-height: 50px;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    font-size: 35px;
+}
+
+.act_text{
+    line-height: 50%;
+    font-size: 30px;
+}
+
+.titulo_front{
+    text-decoration: underline;
+}
+
+.countriess{
+    display: flex;
+    flex-direction: column;
+    font-size:x-large;
+    align-items: flex-start;
+    
+}
+
+.countri_link{
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+}
+
+.flex_c{
+    display: flex;
+}
+
+.btn_home{
+    margin-top: 30px;
+}

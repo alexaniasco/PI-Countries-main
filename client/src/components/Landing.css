@@ -1,0 +1,22 @@
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 1000px
+}
+
+.title{
+font-size: 50px;
+}
+
+.Link{
+    font-size: 30px;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.465);
+    font-size: 30px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

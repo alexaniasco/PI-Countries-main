@@ -1,0 +1,85 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgba(0, 0, 0, 0.404);
+    margin:0px 10px ;
+  
+}
+
+.Home{
+    
+}
+.pagination{
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.pagination-list{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    color: blanchedalmond;
+    font-weight: 700;
+}
+.Home_2{
+    height: 100vh;
+}
+
+.imagen{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+}
+
+.countries{
+    color: white;
+    font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.title{
+    text-decoration: none;
+    line-height: 20px;
+    font-size: larger;
+    font-weight: 800;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.paginate{
+    display:flex;
+    justify-content: space-between;
+    color: white;
+    font-size: large;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 0 30px;
+}
+
+.pag{
+    list-style:none;
+    padding: 5px;
+    border: 2px;
+    border-style:outset;
+    border-color: azure;
+    background-color: rgb(1, 1, 1);
+    
+}
+
+.pagination-btn{
+    
+    font-weight: 900;
+    background-color: rgba(0, 0, 255, 0.386);
+    color: white;
+}
+
+.pagination{
+   display:flex;
+   bottom: 30px;
+}
+
+.selec{
+    background-color: rgba(0, 0, 255, 0.386);
+    color: white;
+}
