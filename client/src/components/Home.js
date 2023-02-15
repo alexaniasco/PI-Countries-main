@@ -15,27 +15,28 @@ export const Home = () => {
   const [page, setPage] = useState(1);
   const pageNumber = [];
   const totalitems = countries.length;
-  
+  const numeropag = useSelector((state)=> state.Npage)
+
   const onPreviusPage = () => {
-    if(page == 1){return}
-    else setPage(page - 1);
+    if(numeropag == 1){return}
+    else dispatch(actions.getNumberPage(numeropag - 1));
     
   };
   
   const onNextPage = () => {
     const itemsperpage = 10
-    const lasttindex = page * itemsperpage
+    const lasttindex = numeropag * itemsperpage
     const firstindex = lasttindex - itemsperpage
-    if(page == 25 || totalitems < lasttindex){return}
-   else setPage(page + 1);
+    if(numeropag == countries.length / itemsperpage || totalitems < lasttindex){return}
+   else dispatch(actions.getNumberPage(numeropag + 1));
   };
   
   const onPage = (e) => {
 
-    setPage(e);
+    dispatch(actions.getNumberPage(e));
   };
   const itemsperpage = 10
-  const lasttindex = page * itemsperpage
+  const lasttindex = numeropag * itemsperpage
   const firstindex = lasttindex - itemsperpage
   
   useEffect(function () {
@@ -46,8 +47,11 @@ export const Home = () => {
   }, []);
   
   for (let i = 1; i <= Math.ceil(totalitems / itemsperpage); i++) {
+
     pageNumber.push(i);
   }
+
+ 
   // const handleclick = (data) => {
   //   const firstindex = data.selected * itemsperpage;
   //   console.log(firstindex);
@@ -66,7 +70,7 @@ export const Home = () => {
             Previous
           </button>
             {pageNumber.map((el) => (
-              <button onClick={() => onPage(el)} className={el == page ? "selec" : "normal"}>
+              <button onClick={() => onPage(el)} className={el == numeropag ? "selec" : "normal"}>
                 {el}
               </button>
             ))}
@@ -95,6 +99,10 @@ export const Home = () => {
         </div>
         
       </div>
+     <div className="ref">
+     <a target={"_blank"} className="refs" href="https://www.instagram.com/bendito.diablo"><img className="refsimg" src="https://eltallerdehector.com/wp-content/uploads/2022/06/cd939-logo-instagram-png.png"></img></a>
+     <a href="https://github.com/alexaniasco" target={"_blank"}><img className="refsimg2" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></img></a>
+     </div>
     </div>
   );
 };

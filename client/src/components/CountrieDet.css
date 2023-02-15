@@ -14,6 +14,10 @@ box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
     height: 100vh;
 }
 
+.nocont{
+   
+}
+
 .text{
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -30,7 +34,6 @@ box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
    flex-wrap: wrap  ;
    flex-direction: column;
    gap: 10px;
-   background-image: url("https://img.ecologiahoy.com/2017/06/paisajes-naturales-26.jpeg");
    background-size: cover;
    background-repeat: no-repeat;
    background-attachment: fixed;
@@ -45,17 +48,19 @@ box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
     color: rgb(255, 255, 255);
     padding: 10px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    margin: 10px 10px;
+    margin: 10px 100px;
     border-style:groove ;
     border-color: rgba(110, 14, 14, 0.711);
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.699);
     
     min-width: 200px;
+   
+
 }
 
 .actt{
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr ;
 }
 
 .acc{

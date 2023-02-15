@@ -58,19 +58,19 @@ export const Navbar = () => {
   };
 
   const functionfil = (json, prop) => {
-    const result = json.sort((a, b) => {
-      if (a.continents == prop) {
-        return -1;
+    const todos = []
+    const result = json.map(function(e){
+      
+      if(e.continents == prop){
+      todos.push(e)
       }
-      if (a.continents !== prop) {
-        return 1;
-      }
-      return 0;
-    });
-    return dispatch(actions.getCountriesFil([...result]));
+    })
+    dispatch(actions.getNumberPage(1))
+    return dispatch(actions.getCountriesFil([...todos]));
   };
 
   const functionfilter = (e) => {
+    dispatch(actions.getNumberPage(1))
     const res = [];
     const valor = e.target.value;
     const map = countries3.map(function (e, index) {
@@ -97,6 +97,9 @@ export const Navbar = () => {
     setError({});
     var regex = /^[a-zA-Z ]+$/;
     const valor = e.target.value.toLowerCase();
+    if (valor.length > 30) {
+      return setError({ error: "Máximo 30 caracteres" });
+    }
     if (regex.test(valor) || valor.length == 0 || valor == " ") {
       return setInput(valor);
     }
@@ -108,10 +111,12 @@ export const Navbar = () => {
   // BUSCADOR DE PAISES
   const buscar = (e) => {
     e.preventDefault();
+
     const mapeado = countries3.filter((e) => e.name == input);
     console.log(mapeado);
     if (mapeado.length == 1) {
       setError({});
+      dispatch(actions.getNumberPage(1))
       return dispatch(actions.getCountriesFil(mapeado));
     }
     if (input.length === 0) {
@@ -124,6 +129,7 @@ export const Navbar = () => {
 
   // BOTON PARA RESETEAR TODO COMO ESTABA AL INICIO
   const reset = () => {
+    dispatch(actions.getNumberPage(1))
     return dispatch(actions.getCountriesFil([...countries3]));
   };
 
@@ -158,7 +164,7 @@ export const Navbar = () => {
         <Link to={"/CreateAct"}>
           <button className="buton">Create Act</button>
         </Link>
-        <button onClick={() => reset()}>Reset</button>
+        <button className="reset" onClick={() => reset()}>Reset</button>
       </div>
 
       <div className="navbar_filters">
@@ -176,7 +182,7 @@ export const Navbar = () => {
           <option value="3">Max Population</option>
           <option value="4">Min Population</option>
         </select>
-        <select onChange={(e) => functionfil(countries, e.target.value)}>
+        <select onChange={(e) => functionfil(countries3, e.target.value)}>
           <option selected disabled>
             Continent
           </option>

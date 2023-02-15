@@ -38,15 +38,15 @@ export const CreateAct = () => {
 
   const [db, setDb] = useState([]);
 
-
-
   // ME GUARDO EL TEXTO------------------------------------------------
   const handletext = (e) => {
     setError({});
     var regex = /^[a-zA-Z ]+$/;
     const valor = e.target.value;
-    if(valor.length >20){return setError({error:"Máximo 20 caracteres"})}
-    if (regex.test(valor) || valor.length == 0 || valor == " " ) {
+    if (valor.length > 20) {
+      return setError({ error: "Máximo 20 caracteres" });
+    }
+    if (regex.test(valor) || valor.length == 0 || valor == " ") {
       setActivity({ ...activity, [e.target.name]: e.target.value });
       return setInput(valor);
     }
@@ -54,18 +54,17 @@ export const CreateAct = () => {
       setError({ error: "No se puede " });
     } else setError({ error: "No se puede ingresar simbolos y/o números" });
   };
-    // if ( regex.test(valor) && valor.length < 20 )  {
-    //   setInput(valor);
-    //   return setActivity({ ...activity, [e.target.name]: e.target.value });
-    // }
-    // if (activity.Activity.length > 19 && regex.test(e.target.value))
-    //    setError({ error: "Maximo de caracteres superado" });
-      
-    // else {
-    //   setInput("")
-    //    setError({ error: "No se puede" });
-    // }
-  
+  // if ( regex.test(valor) && valor.length < 20 )  {
+  //   setInput(valor);
+  //   return setActivity({ ...activity, [e.target.name]: e.target.value });
+  // }
+  // if (activity.Activity.length > 19 && regex.test(e.target.value))
+  //    setError({ error: "Maximo de caracteres superado" });
+
+  // else {
+  //   setInput("")
+  //    setError({ error: "No se puede" });
+  // }
 
   // SETEO LA DIFICULTAD-----------------------------------------
   const handleopt = (e) => {
@@ -157,14 +156,15 @@ export const CreateAct = () => {
   return (
     <div className="formularioss">
       <Link to={"/Home"}>
-        <button>Home</button>
+        <button className="btn_home">Home</button>
       </Link>
       <div className={db.Activity ? "contenedor" : "contenedor2"}>
         <div className="cont_formulario">
           <h1 className="form_h1">Formulario de creacion de actividad</h1>
           <form className="formulario" onSubmit={(e) => submitear(e)}>
-            <label>Actividad</label>
+            <label className="labell">Actividad</label>
             <input
+            autoComplete="off"
               name="Activity"
               value={inputt}
               className={
@@ -174,7 +174,7 @@ export const CreateAct = () => {
             ></input>
 
             <label>Dificultad</label>
-            <select onChange={(e) => handleopt(e)}>
+            <select className="pais_a_select" onChange={(e) => handleopt(e)}>
               <option selected disabled>
                 Difficult
               </option>
@@ -195,7 +195,7 @@ export const CreateAct = () => {
               </option>
             </select>
             <label>Duracion</label>
-            <select onChange={(e) => handletime(e)}>
+            <select className="pais_a_select" onChange={(e) => handletime(e)}>
               <option selected disabled>
                 Duración
               </option>
@@ -216,7 +216,7 @@ export const CreateAct = () => {
               </option>
             </select>
             <label>Season</label>
-            <select onChange={(e) => handleseason(e)}>
+            <select className="pais_a_select" onChange={(e) => handleseason(e)}>
               <option selected disabled>
                 Season
               </option>
@@ -226,13 +226,13 @@ export const CreateAct = () => {
               <option value="autumn">Autumn</option>
             </select>
             <label>Pick Countries</label>
-            <select onChange={(e) => handlecountries(e)}>
+            <select className="pais_a_select" onChange={(e) => handlecountries(e)}>
               <option disabled selected>
                 Countries
               </option>
               {countries
-                ? countries.map((e) => <option value={e.id}>{e.name}</option>)
-                : paises.map((e) => <option value={e.name}>{e.name}</option>)}
+                ? countries.map((e) => <option className="pais_a_select" value={e.id}>{e.name.toUpperCase()}</option>)
+                : paises.map((e) => <option className="pais_a_select" value={e.name}>{e.name}</option>)}
             </select>
             {scountrie.length > 0 && (
               <div className="countrie_selected">
@@ -252,24 +252,25 @@ export const CreateAct = () => {
             <button className="submitear">Crear</button>
           </form>
         </div>
-  
-    {db.Activity && (
-      <div className="activity">
-        <h1 className="succes"> Actividad creada con Exito:</h1>
+
+        {db.Activity && (
+          <div className="activity">
+            <h1 className="succes"> Actividad creada con Exito:</h1>
             <h1>{db.Activity}</h1>
             <h2>Difficultad: {db.Difficult}</h2>
             <h2>Tiempo: {db.Time}</h2>
             <h2>Season: {db.Season.toUpperCase()}</h2>
             <h2>Paises:</h2>
-            {db}
+           
             <div className="ides">
               {db.Countries.map((e) => (
-               <Link to={`/countries/${e}`}><button className="ides_btn">{e}</button></Link>
+                <Link to={`/countries/${e}`}>
+                  <button className="ides_btn">{e}</button>
+                </Link>
               ))}
             </div>
           </div>
         )}
- 
       </div>
     </div>
   );

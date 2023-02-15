@@ -83,3 +83,30 @@
     background-color: rgba(0, 0, 255, 0.386);
     color: white;
 }
+
+.refs{
+    font-size: large;
+    color: wheat;
+    width: 30px;
+    height: 30px;
+   
+}
+
+.refsimg{
+    width: 30px;
+    height: 30px;
+}
+
+.refsimg2{
+    width: 30px;
+    height: 30px;
+}
+
+.ref{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+}

@@ -6,7 +6,8 @@ import {
   GET_COUNTRIES_FIL,
   GET_COUNTRIES_FIL2,
   GET_COUNTRIES_FIL_POPU,
-  GET_COUNTRIES_FIL_POPU2
+  GET_COUNTRIES_FIL_POPU2,
+  GET_NUMBER
   
 
 } from "../actions/index";
@@ -14,7 +15,7 @@ const initialState = {
   Countries: [],
   Countries2: [],
   CountriesDetail: [],
-  
+  Npage:1
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -33,6 +34,8 @@ const rootReducer = (state = initialState, { type, payload }) => {
             return {...state, Countries: payload };
             case GET_COUNTRIES_FIL_POPU2:
               return {...state,Countries: payload };
+              case GET_NUMBER:
+                return {...state,Npage: payload };
     default:
       return initialState;
     // Acá va tu código:

@@ -18,10 +18,11 @@ export const CountrieDet = () => {
     setLoader(false);
   }, [dispatch, id]);
 
+
   const detalles = useSelector((state) => state.CountriesDetail);
 // asdasdasdasdasdasd
   return (
-    <div className="cont">
+    <div className={detalles.length > 0 ? "cont" : "nocont"}>
       <Link to={"/home"}>
         <button className="btn_home" onClick={() => dispatch(actions.getCountriesReset())}>
           HOME
@@ -64,7 +65,10 @@ export const CountrieDet = () => {
                   <div className="flex_c">
                     {e.countriess &&
                       e.countriess.map((e) => (
-                        <Link to={`/countries/${e}`} className="countri_link"> {e} </Link>
+                        <Link to={`/countries/${e}`} onClick={()=> window.scrollTo({
+                          top:0,
+                          behavior:"smooth"
+                        })} className="countri_link" id="countri_link"> {e} </Link>
                       ))}
                   </div>
                 </div>

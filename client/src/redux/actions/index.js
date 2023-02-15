@@ -8,6 +8,7 @@ export const GET_COUNTRIES_DET = "GET_COUNTRIES_DET";
 export const GET_COUNTRIES_FIL_POPU = "GET_COUNTRIES_FIL_POPU";
 export const GET_COUNTRIES_FIL_POPU2 = "GET_COUNTRIES_FIL_POPU2";
 export const GET_COUNTRIES_DET_RESET ="GET_COUNTRIES_DET_RESET"
+export const GET_NUMBER = "GET_NUMBER"
 
 export const getCountries = () => async (dispatch) => {
   const r = await fetch(`http://localhost:3001/countries`);
@@ -24,6 +25,9 @@ export const getCountriesDet = (id) => async (dispatch) => {
 
 export const getCountriesReset = (e) => (dispatch) => {
   dispatch({ type: "GET_COUNTRIES_DET_RESET", payload: [] });
+};
+export const getNumberPage = (e) => (dispatch) => {
+  dispatch({ type: "GET_NUMBER", payload: e });
 };
 
 export const getCountriesFil = (e) => (dispatch) => {
