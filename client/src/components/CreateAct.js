@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./CreateAct.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import * as actions from "../redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 export const CreateAct = () => {
+  const dispatch = useDispatch()
   // SETEO LAS OPCIONES DE PAISES ORDENADO --------------------------------
   useEffect(() => {
     fetch("http://localhost:3001/countries")
@@ -40,11 +42,12 @@ export const CreateAct = () => {
 
   // ME GUARDO EL TEXTO------------------------------------------------
   const handletext = (e) => {
+    setDb([])
     setError({});
     var regex = /^[a-zA-Z ]+$/;
     const valor = e.target.value;
-    if (valor.length > 20) {
-      return setError({ error: "Máximo 20 caracteres" });
+    if (valor.length > 30) {
+      return setError({ error: "Máximo 30 caracteres" });
     }
     if (regex.test(valor) || valor.length == 0 || valor == " ") {
       setActivity({ ...activity, [e.target.name]: e.target.value });
@@ -68,18 +71,21 @@ export const CreateAct = () => {
 
   // SETEO LA DIFICULTAD-----------------------------------------
   const handleopt = (e) => {
+    setDb([])
     setError({});
     console.log(e.target.value);
     return setActivity({ ...activity, Difficult: e.target.value });
   };
   // INSERTO SEASON------------------------------------------------
   const handleseason = (e) => {
+    setDb([])
     setError({});
     console.log(e.target.value);
     return setActivity({ ...activity, Season: e.target.value });
   };
   // INSERTO TIEMPO---------------------------------------------------
   const handletime = (e) => {
+    setDb([])
     setError({});
     console.log(e.target.value);
     return setActivity({ ...activity, Time: e.target.value });
@@ -88,6 +94,7 @@ export const CreateAct = () => {
   // INSERTO LOS PAISES---------------------------------------------
   const arreglo = [];
   const handlecountries = (e) => {
+    setDb([])
     setError({});
     console.log(e.target.value);
 
@@ -121,7 +128,8 @@ export const CreateAct = () => {
       activity.Countries.length !== 0 &&
       regex.test(valor)
     ) {
-      return enviarFetch();
+      enviarFetch();
+      return dispatch(actions.getCountries());
     } else
       return setError({
         error:
@@ -144,6 +152,7 @@ export const CreateAct = () => {
 
   // ELIMINO LOS PAISES SELECCIONADOS
   const menoscountries = (elem) => {
+    setDb([])
     setError({});
     const arr = scountrie;
 

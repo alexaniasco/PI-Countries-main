@@ -64,7 +64,9 @@ export const Navbar = () => {
       if(e.continents == prop){
       todos.push(e)
       }
+      
     })
+    if(todos.length == 0){return}
     dispatch(actions.getNumberPage(1))
     return dispatch(actions.getCountriesFil([...todos]));
   };
@@ -152,13 +154,13 @@ export const Navbar = () => {
           </button>
         </form>
         {error && <h2 className="error_search">{error.error}</h2>}
-        <label className="cfound">Countries Found: </label>
+        
 
-        <input
-          className="found"
-          readOnly
-          placeholder={countries.length}
-        ></input>
+        <h2
+         className="cfound"
+       
+          
+        >Countries found: {countries.length}</h2>
       </div>
       <div className="navbar_butons">
         <Link to={"/CreateAct"}>
@@ -168,21 +170,21 @@ export const Navbar = () => {
       </div>
 
       <div className="navbar_filters">
-        <select onChange={(e) => func(e)}>
+        <select className="navbar_filters"  onChange={(e) => func(e)}>
           <option selected disabled>
             Order
           </option>
           <option value="1">A-z</option>
           <option value="2">Z-a</option>
         </select>
-        <select onChange={(e) => func(e)}>
+        <select className="navbar_filters"  onChange={(e) => func(e)}>
           <option selected disabled>
             Population
           </option>
           <option value="3">Max Population</option>
           <option value="4">Min Population</option>
         </select>
-        <select onChange={(e) => functionfil(countries3, e.target.value)}>
+        <select className="navbar_filters" onChange={(e) => functionfil(countries3, e.target.value)}>
           <option selected disabled>
             Continent
           </option>
@@ -194,7 +196,7 @@ export const Navbar = () => {
           <option value={"North America"}>North America</option>
           <option value={"South America"}>South America</option>
         </select>
-        <select onChange={(e) => functionfilter(e)}>
+        <select className="navbar_filters"  onChange={(e) => functionfilter(e)}>
           <option selected disabled>
             Activity
           </option>

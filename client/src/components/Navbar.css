@@ -1,36 +1,48 @@
 .navbar{
     display: flex;
     justify-content: center;
+    margin: 0;
     line-height: 50px;
     flex-direction: column;
+  
 
+}
+
+.navbar_filters{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
 }
 
 .navbar_form{
     width: 100%;
     height: 100%;
+    transition: all 0.4s ease-in-out;
 }
 
 .navbar_form_group{
-
+    background-color: #00000072;
 }
 
 .navbar_butons{
     display: flex;
     justify-content:space-around;
     flex-direction: row;
+    background-color: #00000072;
+    margin-bottom: 10px;
     
 
 }
 
 .reset{
   border-style:none;
-  padding: 0px 30px;
+  padding: -10px 30px;
+  max-height: 45px;
 color: red;
 font-size: large;
 font-family: 'Courier New', Courier, monospace;
 border-radius: 10px;
 box-shadow: 3px 3px 9px #000000;
+margin-bottom: 20px;
 }
 
 .buton{
@@ -41,6 +53,8 @@ box-shadow: 3px 3px 9px #000000;
     font-size: large;
     font-weight: 700;
     box-shadow: 3px 3px 9px #000000;
+    border-style: none;
+    margin-bottom: 20px;
 }
 
 .search_input{
@@ -57,9 +71,11 @@ box-shadow: 3px 3px 9px #000000;
 
 .cfound{
     color: white;
+    margin: 0;
     font-size: large;
     font-weight: 700;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: #00000072;
 }
 
 .error_search{
@@ -70,4 +86,5 @@ box-shadow: 3px 3px 9px #000000;
     padding: 0 10px;
     top:2%;
     left: 1%;
+    transition: all 0.4s ease-in-out;
 }

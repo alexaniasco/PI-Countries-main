@@ -39,6 +39,11 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.normal{
+    background-color: rgba(255, 255, 255, 0.653);
+    border-style: none;
+    border-radius: 5px;
+}
 .title{
     text-decoration: none;
     line-height: 20px;
@@ -70,7 +75,10 @@
 .pagination-btn{
     
     font-weight: 900;
-    background-color: rgba(0, 0, 255, 0.386);
+    background-color: rgba(35, 35, 251, 0.982);
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px #000000;
     color: white;
 }
 
@@ -109,4 +117,8 @@
     position: fixed;
     bottom: 1%;
     right: 1%;
+}
+
+.cfound{
+
 }

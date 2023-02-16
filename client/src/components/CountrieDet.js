@@ -37,7 +37,7 @@ export const CountrieDet = () => {
               <img className="image" src={e.image}></img>
             </div>
             <div className="text">
-              <h1 className="titulo_front">{e.name}</h1>
+              <h1 className="titulo_front">{e.name.toUpperCase()}</h1>
               <h2>{e.id}</h2>
               <h2>Continent: {e.continents}</h2>
               <h2>Capital: {e.capital}</h2>

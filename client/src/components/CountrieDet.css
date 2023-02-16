@@ -29,6 +29,7 @@ box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
 }
 
 .ACTIVIDADES{
+    font-family: 'Times New Roman', Times, serif;
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap  ;
