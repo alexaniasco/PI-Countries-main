@@ -1,0 +1,144 @@
+.Detalles{
+display:flex;
+flex-direction: column;
+background-color: rgba(0, 0, 0, 0.404);
+align-items: center;
+justify-content: space-evenly;
+
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+
+}
+
+@media (max-width : 1000px){
+    body{
+        background-size: cover;
+    }
+    .cont{
+       grid-template-columns: 1fr !important;
+       grid-template-rows: 1fr 1fr;
+    }
+}
+.cont{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    min-height: 100vh;
+}
+
+.text{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    justify-content: space-between;
+  height: 100%;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.image{
+    margin: 10px 0;
+    min-width: 30vw;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+}
+
+.ACTIVIDADES{
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap  ;
+   flex-direction: column;
+   gap: 10px;
+   background-image: url("https://media0.giphy.com/media/u1ntxwWK5fNf2/giphy.gif?cid=ecf05e47rg78jkvipj8gy4r426o0bz2plhk7prr4adiqfeb2&rid=giphy.gif");
+   background-size:cover;
+   background-repeat:repeat-y;
+
+   height: 100%;
+
+width: 100%;
+   
+
+
+}
+
+.act{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin: 10px 10px;
+    border-style:groove ;
+    border-color: rgba(110, 14, 14, 0.711);
+    background-color: rgba(0, 0, 0, 0.493);
+    
+    min-width: 200px;
+}
+
+.actt{
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   max-height: 100vh;
+   overflow-y: auto;
+   width: 100%;
+   overflow-x:hidden;;
+  
+}
+
+.acc{
+    color: white;
+}
+
+.titulo{
+
+    line-height: 5vh;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 100%;
+    font-size:15px;
+}
+
+.act_text{
+  
+    font-size: 10px;
+}
+
+.titulo_front{
+    text-decoration: none;
+    font-size: 7vh;
+    text-transform: uppercase;
+}
+.titulo_front :first-letter{
+    
+    text-transform: uppercase;
+}
+
+
+.countriess{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size:medium;
+    align-items: flex-start;
+    overflow-x: hidden;
+    
+}
+
+.countri_link{
+    width: 100%;
+    text-decoration: none;
+    margin-right: 10%;
+    color: white;
+}
+
+.flex_c{
+    display: flex;
+}
+
+.btn_home{
+    position: absolute;
+    font-size: 1vw !important;
+    left: 1vw;
+    top: 50%;
+    
+    
+}

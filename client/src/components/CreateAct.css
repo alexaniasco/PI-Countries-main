@@ -1,0 +1,122 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+
+  background-color: rgba(0, 0, 0, 0.636);
+}
+
+.miform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 3vh;
+  height: 100%;
+}
+
+.cont_formulario {
+  font-weight: 600;
+  margin-top: 2%;
+  padding: 0 !important;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.activity {
+  background-color: rgba(255, 255, 255, 0.778);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: stretch;
+ 
+  margin-top: 2%;
+}
+ 
+@media (max-width:1000px){
+    .contenedor{
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+.contenedor {
+height: max-content;
+  display: grid;
+  gap: 10px;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+.contenedor2 {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+
+align-items: center;
+}
+
+.succes {
+  
+
+  background-color: green;
+  margin: 0;
+  padding: 40px;
+}
+
+.error_submit {
+  background-color: red;
+  width: 90%;
+}
+
+.input_error {
+  border-color: red;
+  border-radius: 3px;
+}
+
+.countrie_selected {
+  display: flex;
+}
+
+
+
+.buton_contr {
+  background-color: rgb(185, 72, 72);
+  border-width: 0;
+  margin: 3px;
+}
+.too{
+   margin-top: 1vh;
+}
+
+.form_h1 {
+  background-color: rgba(0, 0, 0, 0.826);
+  color: rgba(255, 255, 255, 0.756);
+  display: flex;
+  margin: 0;
+  padding: 2% 3%;
+
+}
+.miform label {
+  color: rgba(255, 255, 255, 0.596);
+}
+
+.submitear {
+  margin-bottom: 30px;
+
+  border-radius: 5px;
+  background-color: rgba(35, 35, 251, 0.931);
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  box-shadow: 3px 3px 9px #000000;
+}
+
+.ides {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ides_btn {
+  padding: 10px 20px;
+}
