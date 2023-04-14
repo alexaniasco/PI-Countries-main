@@ -55,6 +55,7 @@
 .pagination {
 margin: 20px 0;
   display: flex;
+  max-width: 80%;
 
   justify-content: center;
  
