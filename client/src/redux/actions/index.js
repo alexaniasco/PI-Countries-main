@@ -1,4 +1,6 @@
-import { useSelector } from "react-redux";
+import axios from "axios";
+
+
 
 // Aca deben declarar las variables donde tengan el action types.
 export const GET_COUNTRIES = "GET_COUNTRIES";
@@ -10,16 +12,16 @@ export const GET_COUNTRIES_FIL_POPU2 = "GET_COUNTRIES_FIL_POPU2";
 export const GET_COUNTRIES_DET_RESET ="GET_COUNTRIES_DET_RESET"
 
 export const getCountries = () => async (dispatch) => {
-  const r = await fetch(`http://localhost:3001/countries`);
-  const json = await r.json();
-  dispatch({ type: "GET_COUNTRIES", payload: json });
+  const r = await axios.get('/countries');
+
+  dispatch({ type: "GET_COUNTRIES", payload: r.data });
 };
 
 export const getCountriesDet = (id) => async (dispatch) => {
   if(!id){dispatch({ type: "GET_COUNTRIES_DET", payload: [] })}
-  const r = await fetch(`http://localhost:3001/countries/${id}`);
-  const r_1 = await r.json();
-  dispatch({ type: "GET_COUNTRIES_DET", payload: r_1 });
+  const r = await axios.get(`/countries/${id}`);
+
+  dispatch({ type: "GET_COUNTRIES_DET", payload: r.data });
 };
 
 export const getCountriesReset = (e) => (dispatch) => {

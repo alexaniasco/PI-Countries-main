@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./CreateAct.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 export const CreateAct = () => {
   // SETEO LAS OPCIONES DE PAISES ORDENADO --------------------------------
   useEffect(() => {
-    fetch("http://localhost:3001/countries")
-      .then((r) => r.json())
+    axios.get("/countries")
       .then((r) =>
-        r.sort((a, b) => {
+        r.data.sort((a, b) => {
           if (a.name < b.name) {
             return -1;
           }
@@ -121,12 +121,12 @@ export const CreateAct = () => {
   const enviarFetch = async () => {
     setDb(activity);
     console.log(JSON.stringify(activity));
-    fetch("http://localhost:3001/activity", {
-      method: "POST",
-
-      body: JSON.stringify(activity),
-      headers: { "Content-Type": "application/json" },
-    });
+    axios({
+      method: 'post',
+      url: '/activity',
+      data: activity
+    })
+   .catch(console.log("errorr"))
 
     return alert("Actividad creada con exito");
   };
