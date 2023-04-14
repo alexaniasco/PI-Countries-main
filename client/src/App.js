@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar';
 import { CountrieDet } from './components/CountrieDet';
 import { CreateAct } from './components/CreateAct';
 import axios from 'axios';
-axios.defaults.baseURL = "https://pi-countries-main-eta.vercel.app"
+axios.defaults.baseURL = "https://pi-countries-main-production-f07f.up.railway.app"
  
 function App() {
   
