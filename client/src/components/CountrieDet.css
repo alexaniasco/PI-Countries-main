@@ -135,10 +135,10 @@ width: 100%;
 }
 
 .btn_home{
-    position: absolute;
-    font-size: 1vw !important;
-    left: 1vw;
-    top: 50%;
+    position: fixed;
+
+    left: 41%;
+    top: 92%;
     
     
 }

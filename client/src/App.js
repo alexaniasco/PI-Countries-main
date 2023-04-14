@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar';
 import { CountrieDet } from './components/CountrieDet';
 import { CreateAct } from './components/CreateAct';
 import axios from 'axios';
-axios.defaults.baseURL = "https://pi-countries-main-production-09b5.up.railway.app"
+axios.defaults.baseURL = "http://localhost:3001"
  
 function App() {
   

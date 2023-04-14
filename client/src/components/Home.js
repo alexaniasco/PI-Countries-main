@@ -51,24 +51,7 @@ export const Home = () => {
   return (
     <div className="Home">
       <div className="Home_2 container">
-        <nav className="pagination" role="navigation" aria-label="pagination">
-          <ul className="pagination-list btn-group">
-            <button className="pagination-btn" onClick={onPreviusPage}>
-              Previous
-            </button>
-            {pageNumber.map((el) => (
-              <button
-                onClick={() => onPage(el)}
-                className={el == page ? "selec btn btn-primary" : "normal btn btn-primary "}
-              >
-                {el}
-              </button>
-            ))}
-            <button className="pagination-btn2" onClick={onNextPage}>
-              Next
-            </button>
-          </ul>
-        </nav>
+        
         <div className="grid">
           {countries &&
             countries
@@ -88,6 +71,24 @@ export const Home = () => {
               .slice(firstindex, lasttindex)}
         </div>
       </div>
+      <nav className="pagination" role="navigation" aria-label="pagination">
+          <ul className="pagination-list btn-group">
+            <button className="pagination-btn" onClick={onPreviusPage}>
+              Prev
+            </button>
+            {pageNumber.map((el) => (
+              <button
+                onClick={() => onPage(el)}
+                className={el == page ? "selec btn btn-primary" : "normal btn btn-primary "}
+              >
+                {el}
+              </button>
+            ))}
+            <button className="pagination-btn2" onClick={onNextPage}>
+              Next
+            </button>
+          </ul>
+        </nav>
     </div>
   );
 };
