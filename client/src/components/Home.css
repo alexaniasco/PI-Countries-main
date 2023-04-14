@@ -62,8 +62,9 @@ margin: 20px 0;
 }
 
 .pagination-list {
-  display: flex;
-
+  
+  display: flex !important;
+align-items: center;
   justify-content: space-between;
   color: blanchedalmond;
   font-weight: 500;
@@ -137,9 +138,10 @@ margin: 20px 0;
 }
 
 .normal {
-  font-size: smaller;
+  font-size: 1vw;
   padding-top: 1px;
   padding-bottom: 1px;
+padding: initial;
 }
 .selec {
   background-color: rgba(0, 0, 255, 0.386);
