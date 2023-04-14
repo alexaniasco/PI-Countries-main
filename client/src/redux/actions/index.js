@@ -12,7 +12,11 @@ export const GET_COUNTRIES_FIL_POPU2 = "GET_COUNTRIES_FIL_POPU2";
 export const GET_COUNTRIES_DET_RESET ="GET_COUNTRIES_DET_RESET"
 
 export const getCountries = () => async (dispatch) => {
-  const r = await axios.get('/countries');
+  const r = await axios.get('/countries' ,  {
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      'Access-Control-Allow-Origin': '*' // Could work and fix the previous problem, but not in all APIs
+    }});
 
   dispatch({ type: "GET_COUNTRIES", payload: r.data });
 };

@@ -6,7 +6,7 @@ import * as actions from "../redux/actions";
 
 export const Navbar = () => {
   useEffect(() => {
-    fetch("http://localhost:3001/tabla")
+    fetch("https://pi-countries-main-production-f07f.up.railway.app/tabla")
       .then((r) => r.json())
       .then((r) => r.map((e) => e.name))
       .then((r) => setAct(r));
