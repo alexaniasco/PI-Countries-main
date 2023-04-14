@@ -17,6 +17,14 @@ box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
        grid-template-columns: 1fr !important;
        grid-template-rows: 1fr 1fr;
     }
+    .btn_home{
+       
+    
+        left: 41% !important;
+        top: 92% !important;
+        
+        
+    }
 }
 .cont{
     display: grid;
@@ -137,8 +145,8 @@ width: 100%;
 .btn_home{
     position: fixed;
 
-    left: 41%;
-    top: 92%;
+    left: 1vw;
+    top: 50%;
     
     
 }
