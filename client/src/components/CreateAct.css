@@ -14,6 +14,8 @@
   justify-content: space-evenly;
   gap: 3vh;
   height: 100%;
+ max-width: 70%;
+ min-width: 60%;
 }
 
 .cont_formulario {
@@ -66,7 +68,7 @@ align-items: center;
 
 .error_submit {
   background-color: red;
-  width: 90%;
+ 
 }
 
 .input_error {
@@ -86,7 +88,7 @@ align-items: center;
   margin: 3px;
 }
 .too{
-   margin-top: 1vh;
+   margin-top: 50px;
 }
 
 .form_h1 {

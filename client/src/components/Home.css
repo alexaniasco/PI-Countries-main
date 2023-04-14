@@ -3,15 +3,26 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 35vh 35vh;
   background-color: rgba(0, 0, 0, 0.404);
-  margin: 0px 4vw;
+  margin: 0px 1vw;
   padding: 10px 20px;
   align-items: stretch;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
 
+  }
+  
+  .pagination-btn{
+    bottom: 0 !important;
+  }
+  .pagination-btn2{
+    
+    bottom: 0 !important;
+  }
+  .normal{
+    display: none;
   }
 
   .div_imagen {
@@ -64,7 +75,7 @@
   justify-content: space-between;
   color: blanchedalmond;
   font-weight: 500;
-  font-size: 1vw;
+
 
   margin: 0 !important;
 }
@@ -121,7 +132,7 @@
 
 .pagination-btn {
   position: fixed;
-  top: 50%;
+ bottom: 50%;
   left: 6%;
   font-weight: 900;
   background-color: rgba(0, 0, 255, 0.386);
@@ -130,7 +141,7 @@
 
 .pagination-btn2 {
   position: fixed;
-  top: 50%;
+  bottom: 50%;
   right: 7.9%;
   font-weight: 900;
   background-color: rgba(0, 0, 255, 0.386);

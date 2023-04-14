@@ -13,7 +13,7 @@ export const Landing = () => {
   return (
    <div className='landing'>
     <div >
-        <h1 className='title titllle'>Countries Proyect</h1>
+        <h1 className=' titllle'>Countries Proyect</h1>
         <Link className='Link' to={"/home"}><button className='btn btn-primary'>LOG IN</button></Link>
     </div>
     <footer className='footer'>Made for Alex Huaitiao Añasco</footer>
